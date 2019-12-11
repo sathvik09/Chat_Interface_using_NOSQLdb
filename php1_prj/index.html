@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Chat room</title>
+</head>
+<body style="background-color:#121212;">
+
+  <!-- container & title -->
+  <div class="container my-4" >
+    <h1 class="my-4 text-center animated fadeInLeft" style="color: mintcream;">Chat room</h1>
+    <!-- buttons for chatrooms -->
+    <div class="chat-rooms mb-3 text-center">
+      <div class="my-2 animated fadeInDown" style="animation-delay: 1s;color: mintcream;">Choose a chatroom:</div>
+      <button class="btn animated fadeInLeft" style="animation-delay: 2s;" id="general">General</button>
+      <button class="btn animated fadeInRight" style="animation-delay: 2s;z-index: 100;" id="gaming">Gaming</button>
+      <button class="btn animated fadeInLeft" style="animation-delay: 2s;" id="music">Music</button>
+      <button class="btn animated fadeInRight" style="animation-delay: 2s;" id="ninjas">Ninjas</button>
+    </div>
+    <!-- chat list / window -->
+    <div class="chat-window w3-panel" style="elevation:24dp">
+      <ul class="chat-list list-group-center list-group todos mx-auto text-light "></ul>
+    </div>
+  </div>
+    <!-- new chat form -->
+       <form class="new-chat my-3 container list-group-item-secondary form_s">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Your message:</div>
+        </div>
+        <input type="text" id="message" name='username' class="form-control" required>
+        <div class="input-group-append">
+          <input type="submit" class="btn" value="send">
+        </div>
+      </div>
+    </form>
+    <!--<form class="new-chat container my-4 list-group-item-secondary form_s" style="justify-items: center;">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Your message:</div>
+        </div>
+        <input type="text" id="message" name='username' class="form-control" required>
+        <div class="input-group-append">
+          <input type="submit" class="btn" value="send">
+        </div>
+      </div>
+    </form>-->
+    <!-- update name form -->
+    <form class="new-name container my-4">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Update name:</div>
+        </div>
+        <input type="text" id="name" class="form-control" required>
+        <div class="input-group-append">
+          <input type="submit" class="btn" value="update">
+        </div>
+      </div>
+      <div class="update-mssg"></div>
+    </form>
+
+<script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCW-XxzhVhGnepT8GKKRxo2vAKIo5GKXv4",
+    authDomain: "java-stuff.firebaseapp.com",
+    databaseURL: "https://java-stuff.firebaseio.com",
+    projectId: "java-stuff",
+    storageBucket: "java-stuff.appspot.com",
+    messagingSenderId: "420671784340",
+    appId: "1:420671784340:web:ec388b878f3f3f80c17b81",
+    measurementId: "G-PW7WWPW9WJ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db= firebase.firestore();
+</script>
+  <script src="chat.js"></script>
+  <script src="ui.js"></script>
+  <script src="app.js"></script>
+
+  <!--<script src="regex.js"></script>-->
+</body>
+</html>

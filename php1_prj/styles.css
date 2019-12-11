@@ -1,0 +1,34 @@
+body{
+  background-image: url(img.jpg);
+}
+
+.container{
+    max-width: 600px;
+  }
+  .btn{
+    background: #43d9be;
+    color: white;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .btn:focus{
+    outline: none !important;
+  }
+  .update-mssg
+  {
+      text-align: center;
+      margin: 20px auto;
+  }
+  .ali{
+   text-align: right;
+  }
+  .al{
+
+    background-color: rgba(0,0,0,0.4);border-radius:100vw;
+  }
+  .al:hover{
+
+  background-color: rgba(0,0,0,0.05);border-radius:100vw;
+  border-color: aliceblue;
+  cursor: pointer;
+  }
