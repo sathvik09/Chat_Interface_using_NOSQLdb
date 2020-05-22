@@ -1,1 +1,3 @@
-hey
+A chat interface connected through google Firebase which is a NOSQL db storing all the chats with the sender with the help of collections
+
+A login is also setup uising PHP connected to MYSQL db just to show the way in which data is  stored in a SQL and a NOSQL db.
